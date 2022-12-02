@@ -28,21 +28,6 @@ OUTCOMEMAP = {
     }
 }
 
-def gamecounter(inp: str) -> int:
-    score = 0
-    inp = inp.split("\n")
-    for r in inp:
-        game = r.split(" ")
-        score += OUTCOMEMAP[game[0]][game[1]] + PLAYMAP[game[1]]
-    return score
-
-
-print("test solution p1")
-print(gamecounter(test))
-print("solution p1")
-print(gamecounter(inp))
-    
-
 PLAYMAP2 = {
     "X" : 0,
     "Y" : 3,
@@ -69,16 +54,21 @@ OUTCOMEMAP2 = {
 }
 
 
-def gamecounter2(inp: str) -> int:
+def gamecounter(inp: str, omap: dict, pmap: dict) -> int:
     score = 0
     inp = inp.split("\n")
     for r in inp:
         game = r.split(" ")
-        score += OUTCOMEMAP2[game[0]][game[1]] + PLAYMAP2[game[1]]
+        score += omap[game[0]][game[1]] + pmap[game[1]]
     return score
 
 
+print("test solution p1")
+print(gamecounter(test, OUTCOMEMAP, PLAYMAP))
+print("solution p1")
+print(gamecounter(inp, OUTCOMEMAP, PLAYMAP))
+
 print("test solution p2")
-print(gamecounter2(test))
+print(gamecounter(test, OUTCOMEMAP2, PLAYMAP2))
 print("solution p2")
-print(gamecounter2(inp))
+print(gamecounter(inp, OUTCOMEMAP2, PLAYMAP2))
