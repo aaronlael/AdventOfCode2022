@@ -7,3 +7,5 @@ Happy Honda-Days.
 
 
 Day 1:  The traditional test of "can you use the input" featuring a potential classic off by one indexing error.  It was a good time to figure out how I was going to set up my repo this year.  Last year I jammed all of my inputs into one file but I think this year I'll store all of them in separate files with the test input from the get go to make life "easier". 
+
+Day 2:  I made dictionaries to map the outcomes then parse the input.  I'm sure there was a way that required less thought and manual setup, but it worked the first time performantly which is all I really care about.  Nhawdge will show me the way later.
