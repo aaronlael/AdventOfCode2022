@@ -1,17 +1,10 @@
 from input.day5 import test, inp
 
 def part1(inp: str) -> str:
-    rows = {
-    1 : [],
-    2 : [],
-    3 : [],
-    4: [],
-    5: [],
-    6: [],
-    7: [],
-    8: [],
-    9: []
-}
+    rows = {}
+    for n in range(1,10):
+        rows[n] = []
+
     crates, instructions = inp.split("\n\n")
     crates = crates.split("\n")
     for r in crates[:-1]:
@@ -44,17 +37,10 @@ print(part1(inp))
 
 
 def part2(inp: str) -> str:
-    rows = {
-    1 : [],
-    2 : [],
-    3 : [],
-    4: [],
-    5: [],
-    6: [],
-    7: [],
-    8: [],
-    9: []
-}
+    rows = {}
+    for n in range(1,10):
+        rows[n] = []
+
     crates, instructions = inp.split("\n\n")
     crates = crates.split("\n")
     for r in crates[:-1]:
