@@ -1,9 +1,7 @@
 from input.day5 import test, inp
 
 def part1(inp: str) -> str:
-    rows = {}
-    for n in range(1,10):
-        rows[n] = []
+    rows = {k:[] for k in range(1,10)}
 
     crates, instructions = inp.split("\n\n")
     crates = crates.split("\n")
@@ -37,9 +35,7 @@ print(part1(inp))
 
 
 def part2(inp: str) -> str:
-    rows = {}
-    for n in range(1,10):
-        rows[n] = []
+    rows = {k:[] for k in range(1,10)}
 
     crates, instructions = inp.split("\n\n")
     crates = crates.split("\n")
