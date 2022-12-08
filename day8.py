@@ -1,5 +1,4 @@
 from input.day8 import test, inp
-import math
 
 def solution1(inp: str) -> int:
     treerows = inp.split("\n")
