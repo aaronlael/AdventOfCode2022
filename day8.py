@@ -1,4 +1,5 @@
 from input.day8 import test, inp
+import math
 
 def solution1(inp: str) -> int:
     treerows = inp.split("\n")
@@ -78,7 +79,7 @@ def solution2(inp: str) -> int:
                     break
 
             currentscenicscore.append(directionscore)
-            cs = currentscenicscore[0] * currentscenicscore[1] * currentscenicscore[2] * currentscenicscore[3]
+            cs = math.prod(currentscenicscore)
             if cs > maxscenicscore:
                 maxscenicscore = cs
     return maxscenicscore
