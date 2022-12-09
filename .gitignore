@@ -1,4 +1,4 @@
- input/*.py
+ /input/
  
  # Editors
 .vscode/
