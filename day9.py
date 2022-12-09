@@ -2,8 +2,8 @@ from input.day9 import test, inp, test2
 
 def part1(inp: str) -> int:
     inp = inp.split("\n")
-    tailhasbeenhere = []
-    ropepositions = { 
+    tail_has_been_here = []
+    rope_positions = { 
         "H" : [0, 0],
         "T" : [0, 0]
     }
@@ -11,19 +11,19 @@ def part1(inp: str) -> int:
         direction, quantity = movement.split(" ")
         quantity = int(quantity)
         for _ in range(quantity):
-            previous_h = [x for x in ropepositions["H"]]
+            previous_h = [x for x in rope_positions["H"]]
             if direction == "R":
-                ropepositions["H"][0] += 1
+                rope_positions["H"][0] += 1
             elif direction == "L":
-                ropepositions["H"][0] -= 1
+                rope_positions["H"][0] -= 1
             elif direction == "U":
-                ropepositions["H"][1] += 1
+                rope_positions["H"][1] += 1
             elif direction == "D":
-                ropepositions["H"][1] -= 1
-            if not tailadjacent(ropepositions):
-                ropepositions = updatetail(ropepositions, previous_h)
-            tailhasbeenhere.append(','.join([str(x) for x in ropepositions["T"]]))
-    return len(set(tailhasbeenhere))
+                rope_positions["H"][1] -= 1
+            if not tailadjacent(rope_positions):
+                rope_positions = updatetail(rope_positions, previous_h)
+            tail_has_been_here.append(','.join([str(x) for x in rope_positions["T"]]))
+    return len(set(tail_has_been_here))
 
 
 def tailadjacent(rp: dict) -> bool:
@@ -66,34 +66,34 @@ print("solution p1")
 print(part1(inp))
 
 
-def part2(inp: str) -> int:
+def part2(inp: str, knot_count: int) -> int:
     inp = inp.split("\n")
-    tailhasbeenhere = []
-    ropepositions = { }
-    for n in range(0,10):
-        ropepositions[n] = [0, 0]
+    tail_has_been_here = []
+    rope_positions = { }
+    for n in range(0,knot_count):
+        rope_positions[n] = [0, 0]
     for movement in inp:
         direction, quantity = movement.split(" ")
         quantity = int(quantity)
         for _ in range(quantity):
             if direction == "R":
-                ropepositions[0][0] += 1
+                rope_positions[0][0] += 1
             elif direction == "L":
-                ropepositions[0][0] -= 1
+                rope_positions[0][0] -= 1
             elif direction == "U":
-                ropepositions[0][1] += 1
+                rope_positions[0][1] += 1
             elif direction == "D":
-                ropepositions[0][1] -= 1
-            for i in range(9):
-                if not tailadjacent2(ropepositions, i, i+1):
+                rope_positions[0][1] -= 1
+            for i in range(knot_count - 1):
+                if not tailadjacent2(rope_positions, i, i+1):
                     if i == 0:
-                        ropepositions = updatetail2(ropepositions, i, i+1)
+                        rope_positions = updatetail2(rope_positions, i, i+1)
                     else:
-                        ropepositions = updatetail2(ropepositions, i, i+1)
+                        rope_positions = updatetail2(rope_positions, i, i+1)
 
-            if i == 8:
-                    tailhasbeenhere.append(','.join([str(x) for x in ropepositions[9]]))
-    return len(set(tailhasbeenhere))
+            if i == knot_count - 2:
+                    tail_has_been_here.append(','.join([str(x) for x in rope_positions[knot_count - 1]]))
+    return len(set(tail_has_been_here))
 
 
 def tailadjacent2(rp: dict, st: int, fn: int) -> bool:
@@ -136,8 +136,8 @@ def updatetail2(rp: dict, h: int, t: int) -> dict:
 
 
 print("test solution p2")
-print(part2(test))
+print(part2(test, 10))
 print("test2 solution p2")
-print(part2(test2))
+print(part2(test2, 10))
 print("solution p2")
-print(part2(inp))
+print(part2(inp, 10))
