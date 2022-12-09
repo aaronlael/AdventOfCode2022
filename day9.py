@@ -109,29 +109,29 @@ def tailadjacent2(rp: dict, st: int, fn: int) -> bool:
     else:
         return False
 
-def updatetail2(rp: dict, H: int, T: int) -> dict:
+def updatetail2(rp: dict, h: int, t: int) -> dict:
     # same row
-    if rp[H][0] == rp[T][0]:
-        if rp[H][1] > rp[T][1]:
-            rp[T][1] += 1
+    if rp[H][0] == rp[t][0]:
+        if rp[H][1] > rp[t][1]:
+            rp[t][1] += 1
         else:
-            rp[T][1] -= 1
+            rp[t][1] -= 1
     # same column
-    elif rp[H][1] == rp[T][1]:
-        if rp[H][0] > rp[T][0]:
-            rp[T][0] += 1
+    elif rp[H][1] == rp[t][1]:
+        if rp[H][0] > rp[t][0]:
+            rp[t][0] += 1
         else:
-            rp[T][0] -= 1
+            rp[t][0] -= 1
     # different row and column
     else:
-        if rp[H][0] > rp[T][0]:
-            rp[T][0] += 1
+        if rp[H][0] > rp[t][0]:
+            rp[t][0] += 1
         else:
-            rp[T][0] -= 1
-        if rp[H][1] > rp[T][1]:
-            rp[T][1] += 1
+            rp[t][0] -= 1
+        if rp[H][1] > rp[t][1]:
+            rp[t][1] += 1
         else:
-            rp[T][1] -= 1
+            rp[t][1] -= 1
     return rp
 
 
