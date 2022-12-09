@@ -32,9 +32,9 @@ def solution2(inp: str) -> int:
             currentscenicscore = []
             directionscore = 0
             height = int(treerows[y][x])
-            # look left
             wx = x
             wy = y
+            # look left
             while wx >= 1:
                 wx -= 1
                 if int(treerows[y][wx]) < height:
