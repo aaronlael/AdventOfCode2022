@@ -23,3 +23,9 @@ Day 7:  This was the first one where I think the test cases were a little "mean"
 Day 8:  This is another AoC classic:  the multidimensional-list-look-around type puzzle.  Pretty straight forward except initially I forgot to count the trees that disrupted my viewing pleasure in part two as visible trees, but the test input caught that before I even tried to submit.  All in all a fun puzzle to do while enjoying a cup of coffee and a cinammon roll (or two).
 
 Day 9:  Another AoC classic of navigating space.  It was pretty much like making your own snake game physics.  I used a really cheeky method to handle the diagonals in part one that just did not translate well to part two so I re-wrote it and it was actually a lot simpler than I was making it out to be in my head.  This one took some time, for sure, but it was a nice refresher and didn't have as much hard coding as I suspected it would.
+
+Day 10:  I got part one of this done on Saturday morning and then realized that I had other stuff to do.  This wasn't hard by any means, just annoying.  The end result of my P2 smudged the last letter a tad, but not so much that I couldn't tell what it was.  I'm guessing it has to do with the padding value that I used in part 1 and carried over to P2.
+
+Day 11:  I used classes for this in Python.  Dear god, what have I done.
+
+Day 12:  I started trying to implement A* and then remembered I don't have the attention span to relearn that (even though I implemented it last year on a different puzzle).  I did BFS and it was an instant result for P1 and a tolerable few minutes of run time for P2.  I am not going to optimize it any further because I got the answer and that I what I'm shooting for.
