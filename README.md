@@ -29,3 +29,5 @@ Day 10:  I got part one of this done on Saturday morning and then realized that 
 Day 11:  I used classes for this in Python.  Dear god, what have I done.
 
 Day 12:  I started trying to implement A* and then remembered I don't have the attention span to relearn that (even though I implemented it last year on a different puzzle).  I did BFS and it was an instant result for P1 and a tolerable few minutes of run time for P2.  I am not going to optimize it any further because I got the answer and that I what I'm shooting for.
+
+Day 13:  Evil eval.  I spent a lot of time crafting loops and logic to handle sorting this and thankfully it was pretty much all reusable for part 2 after refactoring a bit to work with a list of ordered values for the compairison rather than the pairs provided.
